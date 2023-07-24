@@ -159,7 +159,9 @@ def count_frequency(character_ngrams: List[str], document: str) -> List[int]:
     return [adjusted_count_dict.get(g) for g in character_ngrams]
 
 
-def highlight_document(document: str, character_ngrams: List[str], weights: List[float], html_name: str) -> None:
+def highlight_document(
+    document: str, character_ngrams: List[str], weights: List[float], html_name: str
+) -> None:
     """
     Highlight the given Chinese character ngrams in the document according to their weights and saves the highlighted
     document as an HTML file.
@@ -177,11 +179,13 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
         None. It saves the highlighted document in the `visualization` directory.
     """
     # supply color-blind hue
-    cmap_positive = mpl.colormaps['seismic']
-    cmap_negative = mpl.colormaps['Greys']
+    cmap_positive = mpl.colormaps["seismic"]
+    cmap_negative = mpl.colormaps["Greys"]
 
     # sort character_ngrams and weights by n in descending order
-    character_ngrams, weights = zip(*sorted(zip(character_ngrams, weights), key=lambda x: -len(x[0])))
+    character_ngrams, weights = zip(
+        *sorted(zip(character_ngrams, weights), key=lambda x: -len(x[0]))
+    )
     # hash Chinese characters to prevent operations on
     # a subtoken from impacting a longer ngram that contains the subtoken
     # (e.g., the subtoken 是 and the longer ngram 于是).
@@ -200,14 +204,17 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
             # convert the RGB color to RGBA with transparency, then to the appropriate CSS format
             color = mpl.colors.to_rgb(color)
             # alpha set to 0.5 for 50% transparency
-            color = f'rgba({int(color[0] * 255)}, {int(color[1] * 255)}, {int(color[2] * 255)}, 0.5)'
-            document = document.replace(ngram, f'''<mark style="background-color:{color};">{hash(ngram)}</mark>''')
+            color = f"rgba({int(color[0] * 255)}, {int(color[1] * 255)}, {int(color[2] * 255)}, 0.5)"
+            document = document.replace(
+                ngram,
+                f"""<mark style="background-color:{color};">{hash(ngram)}</mark>""",
+            )
 
     # convert newlines to HTML paragraph breaks
-    document = document.replace('\n', '</p><p>')
+    document = document.replace("\n", "</p><p>")
 
     # add opening and closing paragraph tags
-    document = f'<p>{document}</p>'
+    document = f"<p>{document}</p>"
 
     # revert to ngrams
     for h, g in hash2ngram.items():
@@ -222,7 +229,7 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
     </html>
     """
     # save the html
-    if not os.path.exists('visualization'):
-        os.makedirs('visualization')
-    with open(f'visualization/{html_name}.html', 'w') as f:
+    if not os.path.exists("visualization"):
+        os.makedirs("visualization")
+    with open(f"visualization/{html_name}.html", "w") as f:
         f.write(html_output)
