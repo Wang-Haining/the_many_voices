@@ -161,14 +161,14 @@ def count_frequency(character_ngrams: List[str], document: str) -> List[int]:
 
 def highlight_document(document: str, character_ngrams: List[str], weights: List[float], html_name: str) -> None:
     """
-    highlight the given Chinese character ngrams in the document according to their weights and saves the highlighted
+    Highlight the given Chinese character ngrams in the document according to their weights and saves the highlighted
     document as an HTML file.
 
     Args:
         document: the original text document in which to highlight ngrams.
         character_ngrams: a list of character ngrams to be highlighted in the document.
-        weights: a list of weights corresponding to the character ngrams. Positive weights are highlighted in plasma
-            colormap and negative weights in viridis colormap. The intensity of the color depends on the absolute value
+        weights: a list of weights corresponding to the character ngrams. Positive weights are highlighted in seismic
+            colormap and negative weights in Greys colormap. The intensity of the color depends on the absolute value
             of the weight.
         html_name: the name of the HTML file to save the highlighted document. The file will be saved in the current
             working directory.
@@ -177,8 +177,8 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
         None. It saves the highlighted document in the `visualization` directory.
     """
     # supply color-blind hue
-    cmap_positive = mpl.colormaps['plasma']
-    cmap_negative = mpl.colormaps['viridis']
+    cmap_positive = mpl.colormaps['seismic']
+    cmap_negative = mpl.colormaps['Greys']
 
     # sort character_ngrams and weights by n in descending order
     character_ngrams, weights = zip(*sorted(zip(character_ngrams, weights), key=lambda x: -len(x[0])))
@@ -209,7 +209,7 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
     # add opening and closing paragraph tags
     document = f'<p>{document}</p>'
 
-    # unhash to ngrams
+    # revert to ngrams
     for h, g in hash2ngram.items():
         document = document.replace(str(h), g)
 
@@ -221,8 +221,6 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
     </body>
     </html>
     """
-    # uncomment to get a copy-paste output
-    # print(html_output)
     # save the html
     if not os.path.exists('visualization'):
         os.makedirs('visualization')
