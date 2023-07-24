@@ -51,6 +51,13 @@ python run.py
 |            | Where Has the Character of the Republic Gone? (民国之征何在)                     | Du               |
 
 
+## Visualization
+
+![viz](assets/viz.jpg)
+
+Reddish characters are features favoring Lu Xun as the author, while the grey ones support the possibility of Zhou 
+Zuoren being the author. The darker the shade, the higher the absolute value of the weights associated with each feature.
+
 ## License
 
 The corpus is designated to the public domain. All other materials are licensed under 0BSD.
