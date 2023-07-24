@@ -53,7 +53,7 @@ python run.py
 
 ## License
 
-The corpus is in the public domain. Other materials are under 0BSD.
+The corpus is designated to the public domain. All other materials are licensed under 0BSD.
 
 [//]: # (## Citation)
 
@@ -65,8 +65,8 @@ The corpus is in the public domain. Other materials are under 0BSD.
 [//]: # (TODO)
 
 ## Contact
-
-[hw56@indiana.edu](mailto:hw56@indiana.edu) 
+- [rwxiexin@shnu.edu.cn](mailto:rwxiexin@shnu.edu.cn) for general questions. 
+- [hw56@indiana.edu](mailto:hw56@indiana.edu) for reproduction.
 
 ## Acknowledgements
 
