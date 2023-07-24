@@ -13,7 +13,7 @@ We provide Colab notebooks for reproducing the results.
 data loading, feature engineering, build a classifier, explaining and visualizing the
 results.
 - [Exploratory data analysis](https://colab.research.google.com/drive/1ryNXKcRrnvPEs61udXisuaHi2bEMbCWQ?usp=sharing), 
-- including feature selection and examination of correlation of the features.
+ including feature selection and examination of correlation of the features.
 
 Note that, the notebooks are for pedagogical purposes. See rigorous reproduction in [Reproduction](#reproduction).
 
