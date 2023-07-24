@@ -47,7 +47,7 @@ python run.py
 
 ## Visualization
 
-<img src="assets/viz.jpg" width="50%">
+<img src="assets/viz.jpg" width="60%">
 
 以《尔越人毋忘先民之训》为例，偏红的字符是支持鲁迅为作者的特征，而灰色的字符则支持周作人可能为作者。颜色越深，与每个特征相关的权重的绝对值就越高。
 
