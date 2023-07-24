@@ -223,6 +223,9 @@ def highlight_document(
     html_output = f"""
     <!DOCTYPE html>
     <html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
     <body>
     {document}
     </body>
