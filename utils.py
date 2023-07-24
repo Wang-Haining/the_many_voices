@@ -216,8 +216,6 @@ def highlight_document(document: str, character_ngrams: List[str], weights: List
     html_output = f"""
     <!DOCTYPE html>
     <html>
-    <head>
-    </head>
     <body>
     {document}
     </body>
