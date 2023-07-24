@@ -63,7 +63,7 @@ X_test = [
     for text, length in [(d["text"], d["text_length"]) for d in test]
 ]
 
-# get labels, xl coded with 1, zzr is coded with 0
+# get labels, lx -> 1, zzr -> 0
 y_train = [d["label"] for d in train]
 y_val = [d["label"] for d in val]
 
