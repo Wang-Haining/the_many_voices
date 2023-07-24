@@ -53,7 +53,7 @@ python run.py
 
 ## Visualization
 
-![viz](assets/viz.jpg)
+<img src="assets/viz.jpg" width="50%">
 
 Take *People of Yue, Forget Not Your Ancestors' Instructions* as an example, reddish characters are features favoring 
 Lu Xun as the author, while the grey ones support the possibility of Zhou Zuoren being the author. The darker the shade,
