@@ -26,12 +26,11 @@ print(
 
 # load data
 train, val, test = load_corpus()
-# specify 33 features derived from recursive feature elimination
-# including 4 bigrams and 29 unigrams
+# specify 31 features derived from recursive feature elimination
+# including 4 bigrams and 27 unigrams
 # fmt: off
-character_ngrams = ['不', '徒', '诚', '焉', '夫', '之', '随', '何', '原', '别', '及', '矣', '全', '多', '于', '皆',
-                    '本', '故', '惟', '各', '是', '而', '乃', '则', '切', '必', '为', '但', '光', '进而', '自然',
-                    '足以', '于是']
+character_ngrams = ['诚', '于', '乃', '光', '原', '各', '必', '惟', '不', '随', '本', '全', '但', '徒', '别', '是', '为',
+                    '何',  '多', '夫', '则', '之', '焉', '皆', '而', '矣', '及', '自然', '进而', '足以', '于是']
 # fmt: on
 
 # feature stats
@@ -69,7 +68,7 @@ y_val = [d["label"] for d in val]
 
 # a standard l2-norm logistic regression
 clf = LogisticRegression(
-    penalty="l2", C=1.0, solver="lbfgs", tol=1e-9, max_iter=int(1e9), random_state=0
+    penalty="l2", C=1.0, solver="lbfgs", tol=1e-9, max_iter=int(1e9)
 )
 
 # machine learning pipeline
@@ -77,9 +76,10 @@ pipline = Pipeline([("scaler", StandardScaler()), ("classifier", clf)])
 # training
 pipline.fit(X_train, y_train)
 
-# validating
-print(f"The validation accuracy is {accuracy_score(y_val, pipline.predict(X_val))}.\n")
+# validation
+print(f"The validation accuracy is {round(accuracy_score(y_val, pipline.predict(X_val)), 3)}.\n")
 
+# prediction
 for prediction, title in zip(pipline.predict_proba(X_test), [d["title"] for d in test]):
     predicted_author = "zzr" if (prediction[0] > prediction[1]) else "lx"
     prob = round(max(prediction), 3)
@@ -103,12 +103,20 @@ summary_df = pd.DataFrame(
         "zzr_freq_per_thousand": ["-"] + zzr_freq_per_thousand,
     }
 )
-print(
-    "The feature weights and relative frequency per thousand characters for each author are summarized below. "
-    "Please note that '1' represents the intercept."
-)
 
-print(summary_df)
+# sort feature importance separately by absolute value
+positive_weights_df = summary_df[summary_df['weight'] > 0]
+negative_weights_df = summary_df[summary_df['weight'] < 0]
+positive_weights_df = positive_weights_df.sort_values('weight', ascending=False)
+negative_weights_df = negative_weights_df.sort_values('weight', key=abs, ascending=False)
+sorted_summary_df = pd.concat([positive_weights_df, negative_weights_df], ignore_index=True)
+
+print(
+    "The feature weights and relative frequencies per thousand characters for each author are summarized below. "
+    "Positive weights support Lu Xun, while negative ones support Zhou Zuoren. The importance of these weights is "
+    "proportional to their absolute value. Note that '1' represents the intercept."
+)
+print(sorted_summary_df)
 
 # visualization
 weights = pipline.named_steps["classifier"].coef_.tolist()[0]
