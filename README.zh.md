@@ -7,11 +7,13 @@
 
 ## 教程
 
-我们提供了用于复现结果的Colab笔记。
-- [主要实验](https://colab.research.google.com/drive/1gYdugVvy_4R2IU3J1oASK5BgV3EiB9Gb?usp=sharing)，包括数据加载、特征工程、构建分类器、解释和可视化结果。
-- [探索性数据分析](https://colab.research.google.com/drive/1ryNXKcRrnvPEs61udXisuaHi2bEMbCWQ?usp=sharing)，包括特征选择和特征关联性的检查。
+我们提供了Colab笔记本以复现结果：
+- [主实验](https://colab.research.google.com/drive/1gYdugVvy_4R2IU3J1oASK5BgV3EiB9Gb?usp=sharing)，包括特征工程，构建分类器，
+以及解释和可视化文章的发现。
+- [特征选择](https://colab.research.google.com/drive/1ryNXKcRrnvPEs61udXisuaHi2bEMbCWQ?usp=sharing)，涉及到选择最有效且简洁的
+用于区分作者身份的特征集，并检查特征的相关性。
 
-请注意，这些笔记本仅供教学使用。参见[复现](#reproduction)进行严谨的复现。
+请注意，这些笔记本主要是为了教学目的。请查看[复现](#reproduction)中的严谨复现方法。
 
 ## 复现
 
@@ -71,4 +73,5 @@ python run.py
 
 ## 鸣谢
 
-该项目得到了中国社科基金青年项目（22CTQ041）的支持。
+该这个项目得到了中国国家社会科学基金（22CTQ041）的支持，以及印第安纳大学布卢明顿校区的数字艺术和人文研究所的人文，艺术，科学和技术联盟实验室奖学金
+的支持。

@@ -8,12 +8,12 @@ the Disputed Writings of Lu Xun and Zhou Zuoren*.
 
 ## Tutorial
 
-We provide Colab notebooks for reproducing the results.
-- [Main experiment](https://colab.research.google.com/drive/1gYdugVvy_4R2IU3J1oASK5BgV3EiB9Gb?usp=sharing), including 
-data loading, feature engineering, build a classifier, explaining and visualizing the
-results.
-- [Exploratory data analysis](https://colab.research.google.com/drive/1ryNXKcRrnvPEs61udXisuaHi2bEMbCWQ?usp=sharing), 
- including feature selection and examination of correlation of the features.
+We provide Colab notebooks for reproducing the results:
+- [Main Experiment](https://colab.research.google.com/drive/1gYdugVvy_4R2IU3J1oASK5BgV3EiB9Gb?usp=sharing), which 
+includes feature engineering, classifier building, as well as interpreting and visualizing the findings.
+- [Feature Selection](https://colab.research.google.com/drive/1ryNXKcRrnvPEs61udXisuaHi2bEMbCWQ?usp=sharing), 
+which involves selecting the most effective and parsimonious feature set for distinguishing authorship and examining the
+correlation of the features.
 
 Note that, the notebooks are for pedagogical purposes. See rigorous reproduction in [Reproduction](#reproduction).
 
@@ -78,4 +78,6 @@ The corpus is designated to the public domain. All other materials are licensed 
 
 ## Acknowledgements
 
-The project is supported by the National Social Science Foundation of China (22CTQ041).
+This project is supported by the National Social Science Foundation of China (22CTQ041), and by the Humanities, Arts, 
+Science, and Technology Alliance Collaboratory scholarship from the Institute for Digital Arts and Humanities at 
+Indiana University Bloomington.
