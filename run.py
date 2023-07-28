@@ -1,8 +1,9 @@
 """
-This module reproduces the findings of our paper, *The Many Voices of Du Ying: Revisiting the Disputed Writings of Lu
-Xun and Zhou Zuoren*. Specifically, it outputs the validation accuracy, predictions of authorship for the four disputed
-essays between Lu Xun and Zhou Zuoren, feature weights, and the relative frequency per thousand characters for each
-author.
+This module reproduces the findings of our paper, *The Many Voices of Du Ying:
+Revisiting the Disputed Writings of Lu Xun and Zhou Zuoren*. Specifically, it outputs
+the validation accuracy, predictions of authorship for the four disputed essays
+between Lu Xun and Zhou Zuoren, feature weights, and the relative frequency per
+thousand characters for each author.
 """
 
 __author__ = "hw56@indiana.edu"
@@ -20,8 +21,8 @@ from utils import load_corpus, count_frequency, highlight_document
 
 print("*" * 99)
 print(
-    "Reproducing the findings of The Many Voices of Du Ying: Revisiting the Disputed Writings of Lu Xun and Zhou "
-    "Zuoren"
+    "Reproducing the findings of The Many Voices of Du Ying: Revisiting the Disputed "
+    "Writings of Lu Xun and Zhou Zuoren"
 )
 
 # load data
@@ -29,8 +30,9 @@ train, val, test = load_corpus()
 # specify 31 features derived from recursive feature elimination
 # including 4 bigrams and 27 unigrams
 # fmt: off
-character_ngrams = ['诚', '于', '乃', '光', '原', '各', '必', '惟', '不', '随', '本', '全', '但', '徒', '别', '是', '为',
-                    '何',  '多', '夫', '则', '之', '焉', '皆', '而', '矣', '及', '自然', '进而', '足以', '于是']
+character_ngrams = ['诚', '于', '乃', '光', '原', '各', '必', '惟', '不', '随', '本',
+                    '全', '但', '徒', '别', '是', '为', '何',  '多', '夫', '则', '之',
+                    '焉', '皆', '而', '矣', '及', '自然', '进而', '足以', '于是']
 # fmt: on
 
 # feature stats
@@ -77,14 +79,18 @@ pipline = Pipeline([("scaler", StandardScaler()), ("classifier", clf)])
 pipline.fit(X_train, y_train)
 
 # validation
-print(f"The validation accuracy is {round(accuracy_score(y_val, pipline.predict(X_val)), 3)}.\n")
+print(
+    f"The validation accuracy is "
+    f"{round(accuracy_score(y_val, pipline.predict(X_val)), 3)}.\n"
+)
 
 # prediction
 for prediction, title in zip(pipline.predict_proba(X_test), [d["title"] for d in test]):
     predicted_author = "zzr" if (prediction[0] > prediction[1]) else "lx"
     prob = round(max(prediction), 3)
     print(
-        f"{title} is predicted to have been written by {predicted_author} with a probability of {prob}."
+        f"{title} is predicted to have been written by {predicted_author} with a "
+        f"probability of {prob}."
     )
 print("\n")
 
@@ -105,16 +111,21 @@ summary_df = pd.DataFrame(
 )
 
 # sort feature importance separately by absolute value
-positive_weights_df = summary_df[summary_df['weight'] > 0]
-negative_weights_df = summary_df[summary_df['weight'] < 0]
-positive_weights_df = positive_weights_df.sort_values('weight', ascending=False)
-negative_weights_df = negative_weights_df.sort_values('weight', key=abs, ascending=False)
-sorted_summary_df = pd.concat([positive_weights_df, negative_weights_df], ignore_index=True)
+positive_weights_df = summary_df[summary_df["weight"] > 0]
+negative_weights_df = summary_df[summary_df["weight"] < 0]
+positive_weights_df = positive_weights_df.sort_values("weight", ascending=False)
+negative_weights_df = negative_weights_df.sort_values(
+    "weight", key=abs, ascending=False
+)
+sorted_summary_df = pd.concat(
+    [positive_weights_df, negative_weights_df], ignore_index=True
+)
 
 print(
-    "The feature weights and relative frequencies per thousand characters for each author are summarized below. "
-    "Positive weights support Lu Xun, while negative ones support Zhou Zuoren. The importance of these weights is "
-    "proportional to their absolute value. Note that '1' represents the intercept."
+    "The feature weights and relative frequencies per thousand characters for each "
+    "author are summarized below. Positive weights support Lu Xun, while negative ones"
+    "support Zhou Zuoren. The importance of these weights is proportional to their "
+    "absolute value. Note that '1' represents the intercept."
 )
 print(sorted_summary_df)
 
