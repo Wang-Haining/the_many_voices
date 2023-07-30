@@ -1,12 +1,12 @@
 """
-This module complements *The Many Voices of Du Ying: Revisiting the Disputed Writings of Lu Xun and Zhou Zuoren*.
-It contains helper function for data loading, cleaning, feature engineering, and visualization.
+This module complements *The Many Voices of Du Ying: Revisiting the Disputed
+Writings of Lu Xun and Zhou Zuoren*. It contains helper function for data loading,
+cleaning, feature engineering, and visualization.
 """
 
 __author__ = "hw56@indiana.edu"
 __version__ = "0.1.0"
 __license__ = "0BSD"
-
 
 import os
 import re
@@ -27,9 +27,8 @@ def load_corpus(
     Args:
         corpus_dir: path to corpus
 
-    Returns:
-        Three dictionaries keyed by 'author', 'label', 'text', 'title', and 'text_length'. The first two fields
-        were left blank for the test split.
+    Returns: Three dictionaries keyed by 'author', 'label', 'text', 'title',
+        and 'text_length'. The first two fields were left blank for the test split.
 
     """
 
@@ -77,8 +76,8 @@ def load_corpus(
 
 def remove_artifact(document: str) -> str:
     """
-    Substitute all English characters (e.g., [MASK]) within squared brackets. Those tokens are used to mask direct
-    quotes.
+    Substitute all English characters (e.g., [MASK]) within squared brackets. Those
+    tokens are used to mask direct quotes.
 
     Args:
         document: a document found in corpus
@@ -104,8 +103,9 @@ def remove_whitespace(document: str) -> str:
 
 def count_frequency(character_ngrams: List[str], document: str) -> List[int]:
     """
-    Count frequencies of Chinese function uni/bi/tri/4-grams from a text. A subordinate gram will not be counted twice
-    if it is a part of a superior gram. For example, in "这是一个例子，用来展示在数'是'和'而是'时的区别。", we count "是" twice
+    Count frequencies of Chinese function uni/bi/tri/4-grams from a text. A
+    subordinate gram will not be counted twice if it is a part of a superior gram.
+    For example, in "这是一个例子，用来展示在数'是'和'而是'时的区别。", we count "是" twice
     (not thrice) and "而是" once.
 
     Args:
@@ -163,17 +163,17 @@ def highlight_document(
     document: str, character_ngrams: List[str], weights: List[float], html_name: str
 ) -> None:
     """
-    Highlight the given Chinese character ngrams in the document according to their weights and saves the highlighted
-    document as an HTML file.
+    Highlight the given Chinese character ngrams in the document according to their
+    weights and saves the highlighted document as an HTML file.
 
-    Args:
-        document: the original text document in which to highlight ngrams.
-        character_ngrams: a list of character ngrams to be highlighted in the document.
-        weights: a list of weights corresponding to the character ngrams. Positive weights are highlighted in seismic
-            colormap and negative weights in Greys colormap. The intensity of the color depends on the absolute value
-            of the weight.
-        html_name: the name of the HTML file to save the highlighted document. The file will be saved in the current
-            working directory.
+    Args: document: the original text document in which to highlight ngrams.
+    character_ngrams: a list of character ngrams to be highlighted in the document.
+    weights: a list of weights corresponding to the character ngrams. Positive
+        weights are highlighted in seismic colormap and negative weights in Greys
+        colormap. The intensity of the color depends on the absolute value of the
+        weight.
+    html_name: the name of the HTML file to save the highlighted document. The file
+        will be saved in the current working directory.
 
     Returns:
         None. It saves the highlighted document in the `visualization` directory.
@@ -201,10 +201,14 @@ def highlight_document(
                 color = cmap_negative(abs(weight) / max_weight)
             else:
                 continue
-            # convert the RGB color to RGBA with transparency, then to the appropriate CSS format
+            # convert the RGB color to RGBA with transparency
+            # then to the appropriate CSS format
             color = mpl.colors.to_rgb(color)
             # alpha set to 0.5 for 50% transparency
-            color = f"rgba({int(color[0] * 255)}, {int(color[1] * 255)}, {int(color[2] * 255)}, 0.5)"
+            color = (
+                f"rgba({int(color[0] * 255)}, "
+                f"{int(color[1] * 255)}, {int(color[2] * 255)}, 0.5)"
+            )
             document = document.replace(
                 ngram,
                 f"""<mark style="background-color:{color};">{hash(ngram)}</mark>""",
