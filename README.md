@@ -23,41 +23,46 @@ Note that, the notebooks are for pedagogical purposes. See rigorous reproduction
 python3.10 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python run.py
+python -m run
 ```
 
 
 ## Corpus
 
-| Split      | Title                                                                      | Author/Pseudonym |
-|------------|----------------------------------------------------------------------------|------------------|
-| Train      | Lessons from the History of Science (科学史教篇)                                | Lu Xun           |
-|            | On the Aberrant Development of Culture (文化偏至论)                             | Lu Xun           |
-|            | Preface to Midst the Wild Carpathians (《匈奴奇士录》序)                           | Zhou Zuoren      |
-|            | Preface to Charcoal Drawing (《炭画》序)                                        | Zhou Zuoren      |
-|            | Preface to The Lost History of Red Star (《红星佚史》序)                          | Zhou Zuoren      |
-|            | Preface to The Yellow Rose (《黄蔷薇》序)                                        | Zhou Zuoren      |
-|            | A Brief Discussion on Fairy Tales (童话略论)                                   | Zhou Zuoren      |
-|            | A Study on Fairy Tales (童话研究)                                              | Zhou Zuoren      |
-| Validation | On Radium (说鈤)                                                               | Lu Xun           |
-|            | On the Power of Mara Poetry (摩罗诗力说)                                        | Lu Xun           |
-|            | Preface to Qiucao Garden Diary (《秋草园日记》序)                                  | Zhou Zuoren      |
-|            | An Addendum to Yisi Diary (乙巳日记附记一则)                                       | Zhou Zuoren      |
-|            | A Glimpse of Jiangnan Examinees (江南考先生之一斑)                                 | Zhou Zuoren      |
-|            | Plight and Broil in a Steamboat (汽船之窘况及苦热)                                 | Zhou Zuoren      |
-| Test       | Looking at the Land of Yue (望越篇)                                           | Du Ying          |
-|            | Looking at the Country of China (望华国篇)                                     | Du Ying          |
-|            | People of Yue, Forget Not Your Ancestors' Instructions (尔越人毋忘先民之训)         | Du               |
-|            | Where Has the Character of the Republic Gone? (民国之征何在)                     | Du               |
+| Split      | Title                                                                      | Author/Pseudonym     |
+|------------|----------------------------------------------------------------------------|----------------------|
+| Train      | Lessons from the History of Science (科学史教篇)                                | Lu Xun               |
+|            | On the Aberrant Development of Culture (文化偏至论)                             | Lu Xun               |
+|            | Preface to Midst the Wild Carpathians (《匈奴奇士录》序)                           | Zhou Zuoren          |
+|            | Preface to Charcoal Drawing (《炭画》序)                                        | Zhou Zuoren          |
+|            | Preface to The Lost History of Red Star (《红星佚史》序)                          | Zhou Zuoren          |
+|            | Preface to The Yellow Rose (《黄蔷薇》序)                                        | Zhou Zuoren          |
+|            | A Brief Discussion on Fairy Tales (童话略论)                                   | Zhou Zuoren          |
+|            | A Study on Fairy Tales (童话研究)                                              | Zhou Zuoren          |
+| Validation | On Radium (说鈤)                                                               | Lu Xun               |
+|            | On the Power of Mara Poetry (摩罗诗力说)                                        | Lu Xun               |
+|            | Preface to Qiucao Garden Diary (《秋草园日记》序)                                  | Zhou Zuoren          |
+|            | An Addendum to Yisi Diary (乙巳日记附记一则)                                       | Zhou Zuoren          |
+|            | A Glimpse of Jiangnan Examinees (江南考先生之一斑)                                 | Zhou Zuoren          |
+|            | Plight and Broil in a Steamboat (汽船之窘况及苦热)                                 | Zhou Zuoren          |
+|            | Looking at the Land of Yue (望越篇)                                           | Zhou Zuoren & Lu Xun |
+| Test       | Looking at the Country of China (望华国篇)                                     | Du Ying              |
+|            | People of Yue, Forget Not Your Ancestors' Instructions (尔越人毋忘先民之训)         | Du                   |
+|            | Where Has the Character of the Republic Gone? (民国之征何在)                     | Du                   |
 
 
 ## Visualization
 
 <img src="assets/eyrwyxmzx.jpg" width="70%">
 
-Take *People of Yue, Forget Not Your Ancestors' Instructions* as an example, reddish characters are features favoring 
-Lu Xun as the author, while the gray ones support the possibility of Zhou Zuoren being the author. The darker the shade,
-the higher the absolute value of the weights associated with each feature.
+Take *Looking at the Country of China* as an example. Reddish characters are features favoring Lu Xun as the author, 
+while the gray ones support the possibility of Zhou Zuoren being the author. The darker the shade, the higher the 
+absolute value of the weights associated with each feature. We can see that Lu Xun-favoring features are spread all 
+over. Indeed, *Looking at the Country of China* is predicted to have been written by Lu Xun with a probability
+of 0.984.
+
+Check more visualization at folder 
+[./visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization).
 
 ## License
 
