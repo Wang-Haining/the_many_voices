@@ -49,13 +49,13 @@ python -m run
 
 ## Visualization
 
-<img src="assets/eyrwyxmzx.jpg" width="70%">
+<img src="assets/whgp.jpg" width="70%">
 
 以望华国篇为例。红色的字符是支持鲁迅为作者的特征，而灰色的字符则支持周作人可能是作者的观点。颜色越深，与每个特征相关的权重的绝对值越高。
 我们可以看到，支持鲁迅的特征遍布整篇文章。事实上，望华国篇被预测为鲁迅所写的概率为0.984。
 
 前往文件夹 
-[./visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization)查看更多.
+[visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization)查看更多.
 
 
 ## 许可证

@@ -53,7 +53,7 @@ python -m run
 
 ## Visualization
 
-<img src="assets/eyrwyxmzx.jpg" width="70%">
+<img src="assets/whgp.jpg" width="70%">
 
 Take *Looking at the Country of China* as an example. Reddish characters are features favoring Lu Xun as the author, 
 while the gray ones support the possibility of Zhou Zuoren being the author. The darker the shade, the higher the 
@@ -62,7 +62,7 @@ over. Indeed, *Looking at the Country of China* is predicted to have been writte
 of 0.984.
 
 Check more visualization at folder 
-[./visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization).
+[visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization).
 
 ## License
 
