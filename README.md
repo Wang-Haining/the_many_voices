@@ -9,7 +9,7 @@ the Disputed Writings of Lu Xun and Zhou Zuoren*.
 We found that *Looking at the Country of China* (shown in the image below) was written by Lu Xun rather than 
 Zhou Zuoren, among other findings. Please refer to our [manuscript](#citation) for details.
 
-<img src="assets/whgp_printed.png" width="65%">
+<img src="assets/whgp_printed.png" width="70%">
 
 
 ## Tutorial

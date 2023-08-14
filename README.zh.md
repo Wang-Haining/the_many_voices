@@ -8,7 +8,7 @@
 
 我们发现《望华国篇》（下图）是由鲁迅所写，而非周作人，这只是我们的发现之一。请参考我们的[论文](#citation)以获取详细信息。
 
-<img src="assets/whgp_printed.png" width="65%">
+<img src="assets/whgp_printed.png" width="70%">
 
 ## 教程
 
