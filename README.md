@@ -6,6 +6,12 @@
 This repository hosts the corpus and scripts for reproducing the findings of *The Many Voices of Du Ying: Revisiting 
 the Disputed Writings of Lu Xun and Zhou Zuoren*.
 
+We found that *Looking at the Country of China* (shown in the image below) was written by Lu Xun rather than 
+Zhou Zuoren, among other findings. Please refer to our [manuscript](#citation) for details.
+
+<img src="assets/whgp_printed.png" width="65%">
+
+
 ## Tutorial
 
 We provide Colab notebooks for reproducing the results:
@@ -68,14 +74,10 @@ Check more visualization at folder
 
 The corpus is designated to the public domain. All other materials are licensed under 0BSD.
 
-[//]: # (## Citation)
+## Citation
 
-[//]: # (TODO)
+TODO
 
-[//]: # ()
-[//]: # (## Demo)
-
-[//]: # (TODO)
 
 ## Contact
 - [rwxiexin@shnu.edu.cn](mailto:rwxiexin@shnu.edu.cn) for general questions. 
