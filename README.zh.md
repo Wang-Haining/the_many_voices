@@ -69,8 +69,17 @@ python -m run
 
 ## 引用
 
-待处理
-
+```tex
+@misc{xie2023voices,
+      title={The Many Voices of Duying: Revisiting the Disputed Essays Between {Lu Xun} and {Zhou Zuoren}}, 
+      author={Xin Xie and Jiangqiong Li and Haining Wang},
+      year={2023},
+      eprint={2310.01440},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/pdf/2310.01440.pdf}
+}
+```
 
 ## 联系方式
 - [rwxiexin@shnu.edu.cn](mailto:rwxiexin@shnu.edu.cn) 一般性问题咨询。
