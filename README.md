@@ -78,7 +78,7 @@ The corpus is designated to the public domain. All other materials are licensed 
 
 ```tex
 @misc{xie2023voices,
-      title={The Many Voices of Duying: Revisiting the Disputed Essays Between {Lu Xun} and {Zhou Zuoren}}, 
+      title={The Many Voices of {Duying}: Revisiting the Disputed Essays Between {Lu Xun} and {Zhou Zuoren}}, 
       author={Xin Xie and Jiangqiong Li and Haining Wang},
       year={2023},
       eprint={2310.01440},
