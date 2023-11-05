@@ -52,7 +52,7 @@ python -m run
 |    | 尔越人毋忘先民之训                                                                    | 独      |
 |    | 民国之征何在                                                                       | 独      |
 
-英文翻译在[translation](https://codeberg.org/haining/the_many_voices/src/branch/main/translation)文件夹中。
+测试集的英文翻译在[translation](https://codeberg.org/haining/the_many_voices/src/branch/main/translation)文件夹中。
 
 ## Visualization
 
