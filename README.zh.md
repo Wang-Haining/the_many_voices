@@ -1,7 +1,7 @@
 # 独应不独
 
-[![en](https://img.shields.io/badge/lang-en-green.svg)](https://codeberg.org/haining/the_many_voices/src/branch/main/README.md)
-[![zh](https://img.shields.io/badge/lang-zh-green.svg)](https://codeberg.org/haining/the_many_voices/src/branch/main/README.zh.md)
+[![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/Wang-Haining/the_many_voices/blob/main/README.md)
+[![zh](https://img.shields.io/badge/lang-zh-green.svg)](https://github.com/Wang-Haining/the_many_voices/blob/main/README.zh.md)
 
 此仓库存储了复现《独应不独：重新审视有争议的鲁迅和周作人的著作》所需的语料和脚本。
 

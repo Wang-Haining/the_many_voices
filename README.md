@@ -1,7 +1,7 @@
 # The Many Voices
 
-[![en](https://img.shields.io/badge/lang-en-green.svg)](https://codeberg.org/haining/the_many_voices/src/branch/main/README.md)
-[![zh](https://img.shields.io/badge/lang-zh-green.svg)](https://codeberg.org/haining/the_many_voices/src/branch/main/README.zh.md)
+[![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/Wang-Haining/the_many_voices/blob/main/README.md)
+[![zh](https://img.shields.io/badge/lang-zh-green.svg)](https://github.com/Wang-Haining/the_many_voices/blob/main/README.zh.md)
 
 This repository hosts the corpus and scripts for reproducing the findings of *The Many Voices of Du Ying: Revisiting 
 the Disputed Writings of Lu Xun and Zhou Zuoren*.
