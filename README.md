@@ -78,14 +78,19 @@ The corpus is designated to the public domain. All other materials are licensed 
 ## Citation
 
 ```tex
-@misc{xie2023voices,
-      title={The Many Voices of {Duying}: Revisiting the Disputed Essays Between {Lu Xun} and {Zhou Zuoren}}, 
-      author={Xin Xie and Jiangqiong Li and Haining Wang},
-      year={2023},
-      eprint={2310.01440},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/pdf/2310.01440.pdf}
+@article{10.1093/llc/fqae084,
+    author = {Xie, Xin and Li, Jiangqiong and Wang, Haining},
+    title = {The many voices of Duying: revisiting the disputed essays between Lu Xun and Zhou Zuoren},
+    journal = {Digital Scholarship in the Humanities},
+    volume = {40},
+    number = {1},
+    pages = {338-353},
+    year = {2024},
+    month = {12},
+    issn = {2055-7671},
+    doi = {10.1093/llc/fqae084},
+    url = {https://doi.org/10.1093/llc/fqae084},
+    eprint = {https://academic.oup.com/dsh/article-pdf/40/1/338/61287241/fqae084.pdf},
 }
 ```
 
