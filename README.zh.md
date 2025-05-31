@@ -52,7 +52,7 @@ python -m run
 |    | 尔越人毋忘先民之训                                                                    | 独      |
 |    | 民国之征何在                                                                       | 独      |
 
-测试集的英文翻译在[translation](https://codeberg.org/haining/the_many_voices/src/branch/main/translation)文件夹中。
+测试集的英文翻译在[translation](https://github.com/Wang-Haining/the_many_voices/tree/main/translation)文件夹中。
 
 ## Visualization
 
@@ -62,7 +62,7 @@ python -m run
 我们可以看到，支持鲁迅的特征遍布整篇文章。事实上，望华国篇被预测为鲁迅所写的概率为0.984。
 
 前往文件夹 
-[visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization)查看更多.
+[visualization](https://github.com/Wang-Haining/the_many_voices/tree/main/visualization)查看更多.
 
 
 ## 许可证
@@ -90,7 +90,7 @@ python -m run
 
 ## 联系方式
 - [rwxiexin@shnu.edu.cn](mailto:rwxiexin@shnu.edu.cn) 一般性问题咨询。
-- [hw56@indiana.edu](mailto:hw56@indiana.edu) 复现相关问题咨询。
+- [hw56@iu.edu](mailto:hw56@iu.edu) 复现相关问题咨询。
 
 ## 鸣谢
 

@@ -56,7 +56,7 @@ python -m run
 |            | People of Yue, Forget Not Your Ancestors' Instructions (尔越人毋忘先民之训)         | Du                   |
 |            | Where Has the Character of the Republic Gone? (民国之征何在)                     | Du                   |
 
-You can find the English translation of the test samples in the folder [translation](https://codeberg.org/haining/the_many_voices/src/branch/main/translation).
+You can find the English translation of the test samples in the folder [translation](https://github.com/Wang-Haining/the_many_voices/tree/main/translation).
 
 ## Visualization
 
@@ -69,7 +69,7 @@ over. Indeed, *Looking at the Country of China* is predicted to have been writte
 of 0.984.
 
 Check more visualization in the folder 
-[visualization](https://codeberg.org/haining/the_many_voices/src/branch/main/visualization).
+[visualization](https://github.com/Wang-Haining/the_many_voices/tree/main/visualization).
 
 ## License
 
@@ -96,7 +96,7 @@ The corpus is designated to the public domain. All other materials are licensed 
 
 ## Contact
 - [rwxiexin@shnu.edu.cn](mailto:rwxiexin@shnu.edu.cn) for general questions. 
-- [hw56@indiana.edu](mailto:hw56@indiana.edu) for reproduction.
+- [hw56@iu.edu](mailto:hw56@iu.edu) for reproduction.
 
 ## Acknowledgements
 
